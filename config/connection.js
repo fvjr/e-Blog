@@ -1,4 +1,4 @@
-const Sequelize = require('squelize');
+const Sequelize = require('sequelize');
 require('dotenv').config();
 
 let sequelize;
@@ -12,7 +12,7 @@ if (process.env.JAWSDB_URL) {
     process.env.DB_PASSWORD,
     {
       host: 'localhost',
-      dialest: 'mysql',
+      dialect: 'mysql',
       port: 3001,
     }
   );
