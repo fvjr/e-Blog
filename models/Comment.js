@@ -20,13 +20,13 @@ Comment.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    // user_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: 'user',
-    //     key: 'id',
-    //   },
-    // },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
+    },
     // creator_name: {
     //   type: DataTypes.STRING,
     //   references: {
@@ -34,13 +34,13 @@ Comment.init(
     //     key: 'name',
     //   },
     // },
-    // post_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: 'post',
-    //     key: 'id',
-    //   },
-    // },
+    post_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'post',
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,
