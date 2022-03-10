@@ -23,7 +23,7 @@ Post.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    // creator_name: {
+    // user_name: {
     //   type: DataTypes.STRING,
     //   allowNull: false,
     //   references: {
@@ -31,13 +31,13 @@ Post.init(
     //     key: 'name',
     //   },
     // },
-    // user_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: 'user',
-    //     key: 'id',
-    //   },
-    // },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,
