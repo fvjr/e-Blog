@@ -3,18 +3,18 @@
     "id": 1,
     "name": "Fernando Vasquez",
     "email": "fvjr@gmail.com",
-    "password": "pass"
+    "password": "password123"
   },
   {
     "id": 2,
     "name": "Cat Cattington",
     "email": "cat@gmail.com",
-    "password": "pass"
+    "password": "password123"
   },
   {
     "id": 3,
     "name": "Caffeine Charlie",
     "email": "coffee@gmail.com",
-    "password": "pass"
+    "password": "password123"
   }
 ]
