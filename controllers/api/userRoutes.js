@@ -21,6 +21,8 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+//create a user
+//http://localhost:3001/api/users/
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
@@ -36,6 +38,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+//http://localhost:3001/login
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({
