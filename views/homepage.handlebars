@@ -4,14 +4,13 @@
       <h2>
         <!-- Call helper function with triple brackets to render the emoji span as HTML -->
         <h1>{{post.id}}:{{post.title}}</h1>
-      </h2>
-      <p>
-      </p>
       <p>Created by {{post.user.name}} on {{format_date post.date_created}}</p>
     </div>
+    <div>
     {{#each comments as |comment|}}
-      <p>{{comment.content}}</p>
+      <p>{{comment.content}} {{comment.date_created}}</p>
     {{/each}}
+    </div>
     <div class='col-md-7'>
       <p>
         {{post.content}}
