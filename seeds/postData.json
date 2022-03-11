@@ -1,7 +1,17 @@
 [
   {
-    "title": "Test Title",
-    "content": "TEST content for POST.",
-    "post_id": 1
+    "title": "Rimworld: My Colonists Keep Fighting",
+    "content": "The game is super addicting.",
+    "user_id": 1
+  },
+  {
+    "title": "Cats: Better than dogs",
+    "content": "MEOWWWWWWWWWWWWWWWWW",
+    "user_id": 2
+  },
+  {
+    "title": "Caffeine- I need it",
+    "content": "I got a coffee but it didn't help",
+    "user_id": 3
   }
 ]
