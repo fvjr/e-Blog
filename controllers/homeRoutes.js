@@ -57,7 +57,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
     where: { user_id: req.session.user_id },
   }).then((dbPostData) => {
     const posts = dbPostData.map((post) => post.get({ plain: true }));
-    res.render('dashboard', posts);
+    res.render('dashboard', { posts, logged_in: req.session.logged_in });
   });
 });
 
