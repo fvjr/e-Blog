@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { response } = require('express');
 const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
@@ -50,15 +51,35 @@ router.get('/', async (req, res) => {
 //   }
 // });
 
-//tested doesn't work
+//tested - works
 // Use withAuth middleware to prevent access to route
+// router.get('/dashboard', withAuth, async (req, res) => {
+//   Post.findAll({
+//     where: { user_id: req.session.user_id },
+//   }).then((dbPostData) => {
+//     const posts = dbPostData.map((post) => post.get({ plain: true }));
+//     if (req.session.logged_in) {
+//       res.render('dashboard', { posts, logged_in: req.session.logged_in });
+//     } else {
+//       res.redirect('/login');
+//     }
+//   });
+// });
+
 router.get('/dashboard', withAuth, async (req, res) => {
-  Post.findAll({
-    where: { user_id: req.session.user_id },
-  }).then((dbPostData) => {
-    const posts = dbPostData.map((post) => post.get({ plain: true }));
-    res.render('dashboard', { posts, logged_in: req.session.logged_in });
-  });
+  try {
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Post }],
+    });
+    const user = userData.get({ plain: true });
+    res.render('dashboard', {
+      ...user,
+      logged_in: true,
+    });
+  } catch (err) {
+    response.status(500).json(err);
+  }
 });
 
 // Prevent non logged in users from viewing the dashboard
