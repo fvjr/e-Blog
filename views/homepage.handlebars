@@ -1,3 +1,14 @@
+<nav class="nav">
+  <a class="nav-link" href="/">Homepage</a>
+  <a class="nav-link" href="/dashboard">Dashboard</a>
+      {{#if logged_in}}
+      <a class="nav-link" href="#">Logout</a>"
+        <button class='no-button' id='logout'>logout</button>
+      {{else}}
+        <a class="nav-link" href='/login'>Login</a>
+      {{/if}}
+</nav>
+
 {{#each posts as |post|}}
   <div class='row mb-4 project'>
     <div class='col-md-5'>
