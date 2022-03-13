@@ -1,3 +1,17 @@
+<nav class='nav'>
+  <a class='nav-link' href='/'>Homepage</a>
+  <a class='nav-link' href='/dashboard'>Dashboard</a>
+  {{#if logged_in}}
+    <a class='nav-link' href='#'><button
+        class='no-button'
+        id='logout'
+      >logout</button></a>"
+
+  {{else}}
+    <a class='nav-link' href='/login'>Login</a>
+  {{/if}}
+</nav>
+
 <div>
   <h2>{{title}}</h2>
   posted by:
@@ -47,4 +61,5 @@
     </form>
   </div>
     
+    <script src="./js/comment.js"></script>
 
