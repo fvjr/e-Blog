@@ -2,7 +2,8 @@
   <h2>{{title}}</h2>
   posted by:
   {{user.name}}
-
+  on
+  {{date_created}}
   {{content}}
 
   <div>
@@ -16,7 +17,8 @@
               {{!-- <h4><a href='/post/'>{{comment.content}}
                   posted by NAME{{name}}</a></h4> --}}
               <h4>{{comment.content}}
-                posted by NAME{{comment.user_id.name}}</h4>
+                posted by
+                {{comment.user_id}}</h4>
             </div>
             <div class='col-md-4'>
               <button
@@ -28,6 +30,21 @@
         {{/each}}
       </div>
     {{/if}}
-
   </div>
 </div>
+    <div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Add a new comment:</h3>
+
+    <form class="form new-comment-form">
+      <div class="form-group">
+        <label for="comment-content">Content:</label>
+        <textarea class="form-input" id="comment-content" name="comment-content"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Add comment</button>
+      </div>
+    </form>
+  </div>
+    
+

@@ -1,14 +1,17 @@
 [
   {
     "content": "111111111111111",
-    "post_id": 1
+    "post_id": 1,
+    "user_id": 1
   },
   {
     "content": "22222222222222222222",
-    "post_id": 2
+    "post_id": 2,
+    "user_id": 2
   },
   {
     "content": "3333333333333333333",
-    "post_id": 3
+    "post_id": 3,
+    "user_id": 3
   }
 ]
